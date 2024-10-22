@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="detalles">#64B5F6</color>
+    <color name="fondoGeneral">#ECEFF1</color> <!-- Gris Claro -->
+    <color name="textoPrincipal">#212121</color> <!-- Gris Oscuro -->
+    <color name="cancelar">#E67E22</color>     <!-- Naranja Intenso -->
+    <color name="eliminar">#E74C3C</color>     <!-- Rojo Intenso -->
+    <color name="aceptar">#2ECC71</color>      <!-- Verde Esmeralda -->
+    <color name="primario">#1E3A8A</color>     <!-- Azul Profundo -->
+    <color name="primario2">#4F77EC</color>     <!-- Azul Profundo -->
+    <color name="link">#FFEB3B</color>     <!-- Azul Profundo -->
+    <color name="secundario">#F5F5F5</color>   <!-- Blanco Suave -->
+    <color name="completado">#470FAA</color>
+
+
+
+</resources>

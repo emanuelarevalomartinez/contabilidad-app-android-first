@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primario"
+    tools:context="com.emanuel_dam.contabilidad.UI.AcercaDe.AcercaDeActivity">
+
+    <LinearLayout
+        android:id="@+id/contenedorBarraAcercaDe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+            android:id="@+id/botonRegresarDesdeAcercaDe"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/detalles"
+            android:paddingHorizontal="22dp"
+            android:src="@drawable/ic_regresar"
+            app:tint="@color/secundario"
+            />
+
+
+        <TextView
+            android:id="@+id/barraAcercaDe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp"
+            android:text="@string/nombre_barra_acerca_de"
+            android:textColor="@color/secundario"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/contenedorInformacionAcercaDe"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contenedorBarraAcercaDe"
+        app:layout_constraintBottom_toTopOf="@+id/copyrightSymbolYFecha"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="12dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Creado por"
+                android:textStyle="bold"
+                android:textColor="@color/detalles"
+                android:textSize="24dp"
+                />
+            <TextView
+                android:layout_marginTop="4dp"
+                android:textColor="@color/secundario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emanuel Arévalo Martínez"
+                android:textSize="24dp"
+                />
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contáctame"
+                android:textStyle="bold"
+                android:textColor="@color/detalles"
+                android:textSize="24dp"
+                />
+            <TextView
+                android:id="@+id/correoLink"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:textColor="@color/link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/acerca_de_correo_personal"
+                android:textSize="18dp"
+                />
+
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Versión actual"
+                android:textStyle="bold"
+                android:textColor="@color/detalles"
+                android:textSize="24dp"
+                />
+            <TextView
+                android:layout_marginTop="4dp"
+                android:textColor="@color/secundario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.0.0"
+                android:textSize="24dp"
+                />
+
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Objetivo de la aplicación"
+                android:textStyle="bold"
+                android:textColor="@color/detalles"
+                android:textSize="24dp"
+                />
+            <TextView
+                android:layout_marginTop="4dp"
+                android:textColor="@color/secundario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/acerca_de_objetivo"
+                android:textSize="18dp"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Secciones"
+                android:textStyle="bold"
+                android:textColor="@color/detalles"
+                android:textSize="24dp"
+                />
+
+            <TextView
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nuevo Informe"
+                android:textColor="@color/aceptar"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:textColor="@color/secundario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/acerca_de_objetivo_nuevo_informe"
+                android:textSize="18dp"
+                />
+
+            <TextView
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver informes"
+                android:textColor="@color/aceptar"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:textColor="@color/secundario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/acerca_de_objetivo_ver_informes"
+                android:textSize="18dp"
+                />
+
+            <TextView
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calcular Masas"
+                android:textColor="@color/aceptar"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:textColor="@color/secundario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/acerca_de_objetivo__calcular_masas"
+                android:textSize="18dp"
+                />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/copyrightSymbolYFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text=""
+        android:textColor="@color/secundario"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingVertical="4dp"
+        android:textSize="24dp"
+        android:background="@color/primario2"
+        app:layout_constraintTop_toBottomOf="@+id/contenedorInformacionAcercaDe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

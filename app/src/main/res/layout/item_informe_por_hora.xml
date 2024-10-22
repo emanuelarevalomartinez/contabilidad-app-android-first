@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardViewItemInformePorHora"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/primario2"
+    app:cardCornerRadius="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:layout_margin="8dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+
+        <CheckBox
+            android:id="@+id/checkBoxInformePorHora"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textViewHoraInforme"
+            android:layout_weight="16"
+            android:layout_width="0dp"
+            android:textColor="@color/secundario"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:layout_height="match_parent"
+            android:text=""
+            />
+
+        <ImageButton
+            android:id="@+id/imageButtonEliminarInformePorHora"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:backgroundTint="@color/eliminar"
+            android:layout_marginEnd="10dp"
+            app:tint="@color/secundario"
+            app:srcCompat="@drawable/ic_eliminar" />
+
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

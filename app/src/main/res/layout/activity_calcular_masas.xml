@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primario"
+    tools:context="com.emanuel_dam.contabilidad.UI.CalcularMasas.CalcularMasasActivity">
+
+    <LinearLayout
+        android:id="@+id/contenedorBarraCalcularMasas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+            android:id="@+id/botonRegresarDesdeCalcularMasas"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/detalles"
+            android:paddingHorizontal="22dp"
+            android:src="@drawable/ic_regresar"
+            app:tint="@color/secundario"
+            />
+
+
+        <TextView
+            android:id="@+id/barraCalcularMasas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp"
+            android:text="@string/nombre_barra_calcular_masas"
+            android:textColor="@color/secundario"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contenedorBarraCalcularMasas"
+        app:layout_constraintVertical_bias="0.0"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/precioUnitarioProducto"
+                style="@style/estiloCamposDeTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextCostoUnitario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:hint="Costo Unitario"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:paddingEnd="20dp"
+                    android:singleLine="true"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/secundario"
+                    android:textCursorDrawable="@drawable/personalizacion_cursor"
+                    android:textSize="40dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/contenedorCantidadDeProductos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/precioUnitarioProducto">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/disminuirCantidadDeProductos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/eliminar"
+                    android:src="@drawable/ic_menos"
+                    app:tint="@color/secundario"
+
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/estiloCamposDeTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextCantidadDeProductos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:hint="Cantidad"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:paddingEnd="20dp"
+                        android:singleLine="true"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/secundario"
+                        android:textCursorDrawable="@drawable/personalizacion_cursor"
+                        android:textSize="40dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/aumentarCantidadDeProductos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/detalles"
+                    android:src="@drawable/ic_mas"
+                    app:tint="@color/secundario" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contenedoraRadioBotonesBotonesCalculoDeMasas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contenedorCantidadDeProductos">
+
+
+                <RadioGroup
+                    android:id="@+id/grupoDeBotones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/radioBotonKilogramos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:button="@drawable/personalizacion_radio_boton"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/radioBotonLibras"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:button="@drawable/personalizacion_radio_boton"
+                        android:gravity="center"
+                        android:text="" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/radioBotonUnidadesDeMedida"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:button="@drawable/personalizacion_radio_boton"
+                        android:gravity="center"
+                        android:text="" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/informacionRadioBotonesBotonesCalculoDeMasas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contenedoraRadioBotonesBotonesCalculoDeMasas">
+
+                <TextView
+                    android:id="@+id/textViewKilogramos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/personalizacion_text_view_bordes"
+                    android:gravity="center"
+                    android:text="KG"
+                    android:textColor="@color/secundario"
+                    android:textSize="40dp" />
+
+                <TextView
+                    android:id="@+id/textViewLibras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="LB"
+                    android:textColor="@color/secundario"
+                    android:textSize="40dp" />
+
+                <TextView
+                    android:id="@+id/textViewUnidadesDeMedida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="UM"
+                    android:textColor="@color/secundario"
+                    android:textSize="40dp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="80dp"
+                android:id="@+id/resultadoCalculo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="________"
+                android:textColor="@color/link"
+                android:textSize="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/informacionRadioBotonesBotonesCalculoDeMasas" />
+
+
+            <Button
+                android:id="@+id/botonDarResultado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="@color/aceptar"
+                android:paddingVertical="20dp"
+                android:text="Calcular"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/resultadoCalculo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

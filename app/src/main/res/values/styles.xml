@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="estiloCamposDeTexto" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <!-- Color for the hint (when not focused) -->
+        <item name="android:textColorHint">@color/detalles</item>
+        <!-- Color for the hint (when focused) -->
+        <item name="hintTextColor">@color/detalles</item>
+        <!-- Color for the line and hint when focused -->
+        <item name="boxStrokeColor">@color/detalles</item>
+
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="CustomRadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/personalizacion_radio_boton</item> <!-- Usar el selector como botón -->
+        <item name="android:textColor">@color/textoPrincipal</item> <!-- Cambiar el color del texto -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>

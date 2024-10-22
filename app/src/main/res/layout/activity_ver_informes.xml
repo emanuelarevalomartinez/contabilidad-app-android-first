@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primario"
+    tools:context="com.emanuel_dam.contabilidad.UI.VerInformes.VerInformesActivity">
+
+    <LinearLayout
+        android:id="@+id/contenedorBarraVerInformes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/botonRegresarDesdeVerInformes"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/detalles"
+            android:paddingHorizontal="22dp"
+            android:src="@drawable/ic_regresar"
+            app:tint="@color/secundario"
+            />
+
+
+        <TextView
+            android:id="@+id/barraNuevoInforme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp"
+            android:text="@string/nombre_barra_ver_informes"
+            android:textColor="@color/secundario"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPorFecha"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contenedorBarraVerInformes"
+        tools:listitem="@layout/item_informe_por_fecha" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

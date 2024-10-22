@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Contabilidad</string>
+    <string name="nombre_app">Contabilidad</string>
+
+    <!--    nuevo informe-->
+    <string name="nombre_barra_nuevo_informe">Nuevo Informe</string>
+
+
+    <!--   ver informes-->
+    <string name="nombre_barra_ver_informes">Informes</string>
+
+    <!--   calcular masas -->
+    <string name="nombre_barra_calcular_masas">Calcular Masas</string>
+
+
+    <!--    acerca De-->
+    <string name="nombre_barra_acerca_de">Acerca De</string>
+    <string name="acerca_de_correo_personal">emanuelarevalomartinez@gmail.com</string>
+    <string name="acerca_de_objetivo">La aplicación facilita el registro y gestión de usuarios que realizan compras a través de las distintas plataformas de pago en línea en el establecimiento, optimizando el control de recursos vendidos y aumentando la atención al cliente.</string>
+    <string name="acerca_de_objetivo_nuevo_informe">En esta sección, el usuario proporciona toda la información necesaria al realizar una compra a través de las distintas plataformas de pago en línea.</string>
+    <string name="acerca_de_objetivo_ver_informes">En este apartado se almacenan los informes guardados, organizados por fecha, comenzando por el día más reciente. Al acceder a un grupo, los informes se muestran ordenados por la hora de creación.</string>
+    <string name="acerca_de_objetivo__calcular_masas">Una calculadora integrada que permite calcular el costo total de un producto a partir de su precio unitario, proporcionando resultados en kilogramos (KG), libras (Lb) y unidades de medida (UM).</string>
+
+
+    <!--    editar informe especifico -->
+    <string name="nombre_barra_editar_informe_especifico">Editar Informe</string>
+
+
+</resources>

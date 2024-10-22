@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primario"
+    tools:context="com.emanuel_dam.contabilidad.UI.VerInformes.editarInformeEspecificoActivity">
+
+    <LinearLayout
+        android:id="@+id/contenedorBarraEditarInforme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+            android:id="@+id/botonRegresarDesdeEditarInforme"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/detalles"
+            android:paddingHorizontal="22dp"
+            android:src="@drawable/ic_regresar"
+            app:tint="@color/secundario"
+            />
+
+
+        <TextView
+            android:id="@+id/barraEditarInforme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp"
+            android:text="@string/nombre_barra_editar_informe_especifico"
+            android:textColor="@color/secundario"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/contenedorElementosScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/contenedorBarraEditarInforme"
+        app:layout_constraintBottom_toTopOf="@id/botonGuardarInformeEditado"
+        android:layout_marginHorizontal="12dp"
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenedorCamposEditarInforme"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            >
+
+            <TextView
+                android:id="@+id/tvFechaInformeEspecificoEdiccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Fecha"
+                android:textStyle="italic"
+                android:textColor="@color/link"
+                android:textSize="16dp"
+                android:layout_marginTop="8dp"
+                />
+
+            <TextView
+                android:id="@+id/textViewFechaInformeEspecificoEdiccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFechaInformeEspecificoEdiccion"
+                android:text=""
+                android:textColor="@color/secundario"
+                android:textSize="30dp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputNombreUsuario"
+                style="@style/estiloCamposDeTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/inputMovilDeUsuario"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewFechaInformeEspecificoEdiccion"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextNombreDeUsuarioCompleto"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:hint="Nombre completo"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@drawable/personalizacion_cursor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputMovilDeUsuario"
+                style="@style/estiloCamposDeTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputNombreUsuario">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextMovilUsuario"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:hint="Movíl"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@drawable/personalizacion_cursor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputMontoTotal"
+                style="@style/estiloCamposDeTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputMovilDeUsuario">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextMontoTotalAPagar"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:hint="Monto total a pagar"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@drawable/personalizacion_cursor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputSMS"
+                style="@style/estiloCamposDeTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputMontoTotal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextCodigoSMSDeConformacion"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:hint="Código SMS"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@drawable/personalizacion_cursor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvHoraInformeEspecificoEdicion"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputSMS"
+                android:text="Hora"
+                android:textStyle="italic"
+                android:textColor="@color/link"
+                android:textSize="16dp"
+                />
+
+            <TextView
+                android:id="@+id/textViewHoraInformeEspecificoEdicion"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvHoraInformeEspecificoEdicion"
+                android:text=""
+                android:textColor="@color/secundario"
+                android:textSize="30dp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputProducto"
+                style="@style/estiloCamposDeTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewHoraInformeEspecificoEdicion"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextProductosYSusCantidades"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:hint="Productos y sus cantidades"
+                    android:textCursorDrawable="@drawable/personalizacion_cursor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/botonGuardarInformeEditado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="12dp"
+        android:textSize="18dp"
+        android:paddingVertical="20dp"
+        android:backgroundTint="@color/aceptar"
+        android:text="Actualizar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contenedorElementosScroll"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

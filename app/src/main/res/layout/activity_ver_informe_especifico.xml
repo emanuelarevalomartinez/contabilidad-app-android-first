@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primario"
+    tools:context="com.emanuel_dam.contabilidad.UI.VerInformes.VerInformeEspecificoActivity">
+
+    <LinearLayout
+        android:id="@+id/contenedorBarraVerInformeEspecifico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+            android:id="@+id/botonRegresarDesdeVerInformeEspecifico"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/detalles"
+            android:paddingHorizontal="22dp"
+            android:src="@drawable/ic_regresar"
+            app:tint="@color/secundario"
+            />
+
+
+        <TextView
+            android:id="@+id/barraVerInformeEspecifico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp"
+            android:text="Detalles Informe"
+            android:textColor="@color/secundario"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_marginHorizontal="12dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contenedorBarraVerInformeEspecifico"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:id="@+id/contenedorEditarInforme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal"
+                >
+
+                <CheckBox
+                    android:id="@+id/checkBoxInformeCompetado"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/secundario"
+                    android:gravity="center"
+                    android:scaleX="2"
+                    android:scaleY="2"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textViewEstadoEditadoInformeEspecifico"
+                    android:textSize="20dp"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/aceptar"
+                    android:text="No-Editado"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/botonEditarInformeEspecifico"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/ic_editar"
+                    android:backgroundTint="@color/link"
+                    android:tint="@color/black"
+
+                    />
+
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/botonEliminarInformeEspecifico"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/ic_eliminar"
+                    android:backgroundTint="@color/eliminar"
+                    android:tint="@color/secundario"
+
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contenedorEditarInforme"
+                >
+
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/link"
+                    android:text="Fecha"
+                    android:textStyle="italic"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewFechaInformeEspecifico"
+                    android:textSize="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secundario"
+                    android:text=""
+                    />
+
+                <TextView
+                    android:textStyle="italic"
+                    android:layout_marginTop="8dp"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/link"
+                    android:text="Nombre completo"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewNombreCompletoInformeEspecifico"
+                    android:textSize="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secundario"
+                    android:text=""
+                    />
+
+                <TextView
+                    android:textStyle="italic"
+                    android:layout_marginTop="8dp"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/link"
+                    android:text="Móvil"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewMovilUsuarioInformeEspecifico"
+                    android:textSize="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secundario"
+                    android:text=""
+                    />
+
+                <TextView
+                    android:textStyle="italic"
+                    android:layout_marginTop="8dp"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/link"
+                    android:text="Monto total a pagar"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewMontoTotalAPagarInformeEspecifico"
+                    android:textSize="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secundario"
+                    android:text=""
+                    />
+
+                <TextView
+                    android:textStyle="italic"
+                    android:layout_marginTop="8dp"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/link"
+                    android:text="Código SMS"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewCodigoSMSInformeEspecifico"
+                    android:textSize="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secundario"
+                    android:text=""
+                    />
+
+                <TextView
+                    android:textStyle="italic"
+                    android:layout_marginTop="8dp"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/link"
+                    android:text="Hora"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewHoraInformeEspecifico"
+                    android:textSize="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secundario"
+                    android:text=""
+                    />
+
+                <TextView
+                    android:textStyle="italic"
+                    android:layout_marginTop="8dp"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/link"
+                    android:text="Productos"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewProductosYCantidadesInformeEspecifico"
+                    android:textSize="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secundario"
+                    android:text=""
+                    />
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
